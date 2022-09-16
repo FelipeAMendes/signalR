@@ -1,0 +1,29 @@
+<h1>SignalR</h1>
+<h5>Using SignalR to show when Account state changes</h5>
+<hr />
+
+<div class="row {{getClass(account.state)}}">
+    <div class="col-4">
+        <p>Owner: {{account.owner}}</p>
+    </div>
+    <div class="col-4">
+        <p>Balance: {{account.balance}}</p>
+    </div>
+    <div class="col-4">
+        <p>State: {{account.state}}</p>
+    </div>
+</div>
+
+<hr />
+
+<div class="row">
+    <div class="col-4">
+        <label>Amount: </label>
+        <input class="form-control" type="text" [(ngModel)]="amount" />
+    </div>
+    <div class="col-12 pt-2">
+        <button class="btn btn-primary m-1" (click)="deposit()">Deposit</button>
+        <button class="btn btn-primary m-1" (click)="withdraw()">Withdraw</button>
+        <button class="btn btn-primary m-1" (click)="payInterest()">Pay Interest</button>
+    </div>
+</div>
